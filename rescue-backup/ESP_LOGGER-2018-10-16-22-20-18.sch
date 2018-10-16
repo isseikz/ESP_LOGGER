@@ -292,7 +292,7 @@ U 1 1 5BCC035E
 P 3000 1850
 F 0 "MPU1" H 2894 1425 50  0000 C CNN
 F 1 "Conn_01x04_Female" H 2894 1516 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 3000 1850 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x02_Pitch2.54mm" H 3000 1850 50  0001 C CNN
 F 3 "~" H 3000 1850 50  0001 C CNN
 	1    3000 1850
 	-1   0    0    1   
