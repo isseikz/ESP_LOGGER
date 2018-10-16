@@ -320,9 +320,9 @@ Text GLabel 3400 1650 2    50   Input ~ 0
 Text GLabel 3400 1750 2    50   Input ~ 0
 GND
 Text GLabel 3400 1850 2    50   Input ~ 0
-SCL
+S_SCL
 Text GLabel 3400 1950 2    50   Input ~ 0
-SDA
+S_SDA
 Wire Wire Line
 	3200 1650 3400 1650
 Wire Wire Line
@@ -585,4 +585,42 @@ $EndComp
 Connection ~ 5250 2950
 Wire Wire Line
 	5250 2950 5300 2950
+Text GLabel 5100 4300 0    50   Input ~ 0
+SCL
+Text GLabel 5100 4650 0    50   Input ~ 0
+SDA
+Text GLabel 5900 4650 2    50   Input ~ 0
+S_SCL
+Text GLabel 5900 4300 2    50   Input ~ 0
+S_SDA
+$Comp
+L Device:R R5
+U 1 1 5BD309D1
+P 5500 4300
+F 0 "R5" V 5293 4300 50  0000 C CNN
+F 1 "10k" V 5384 4300 50  0000 C CNN
+F 2 "" V 5430 4300 50  0001 C CNN
+F 3 "~" H 5500 4300 50  0001 C CNN
+	1    5500 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5BD30A72
+P 5500 4650
+F 0 "R6" V 5293 4650 50  0000 C CNN
+F 1 "10k" V 5384 4650 50  0000 C CNN
+F 2 "" V 5430 4650 50  0001 C CNN
+F 3 "~" H 5500 4650 50  0001 C CNN
+	1    5500 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 4300 5350 4300
+Wire Wire Line
+	5650 4300 5900 4300
+Wire Wire Line
+	5100 4650 5350 4650
+Wire Wire Line
+	5650 4650 5900 4650
 $EndSCHEMATC

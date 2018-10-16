@@ -1,4 +1,4 @@
-update=22/05/2015 07:44:53
+update=2018/10/16 19:57:50
 version=1
 last_client=kicad
 [general]
@@ -31,3 +31,4 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+LibName1=switches
