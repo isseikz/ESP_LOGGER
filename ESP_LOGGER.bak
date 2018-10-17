@@ -605,4 +605,34 @@ F 3 "~" H 7500 3200 50  0001 C CNN
 	1    7300 3200
 	0    -1   -1   0   
 $EndComp
+Text GLabel 6500 3600 0    50   Input ~ 0
+GND
+Text GLabel 7500 3600 2    50   Input ~ 0
+GND
+Wire Wire Line
+	7500 3600 7300 3600
+Wire Wire Line
+	6500 3600 6700 3600
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5BCAFF4C
+P 6700 3600
+F 0 "TP5" V 6654 3788 50  0000 L CNN
+F 1 "TestPoint" V 6745 3788 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 6900 3600 50  0001 C CNN
+F 3 "~" H 6900 3600 50  0001 C CNN
+	1    6700 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5BCAFF53
+P 7300 3600
+F 0 "TP7" V 7495 3674 50  0000 C CNN
+F 1 "TestPoint" V 7404 3674 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 7500 3600 50  0001 C CNN
+F 3 "~" H 7500 3600 50  0001 C CNN
+	1    7300 3600
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

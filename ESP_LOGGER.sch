@@ -18,7 +18,7 @@ Text GLabel 1350 4350 0    50   Input ~ 0
 3.3V
 Text GLabel 1350 4650 0    50   Input ~ 0
 GND
-Text GLabel 2850 4350 0    50   Input ~ 0
+Text GLabel 2850 4700 0    50   Input ~ 0
 BOOT
 Wire Wire Line
 	2850 4350 3000 4350
@@ -48,11 +48,11 @@ Connection ~ 3900 5300
 Wire Wire Line
 	3500 5650 3350 5650
 Wire Wire Line
-	3350 5650 3350 5300
+	3350 5650 3350 5500
 Wire Wire Line
 	3300 5300 3350 5300
 Connection ~ 3350 5300
-Text GLabel 2850 5300 0    50   Input ~ 0
+Text GLabel 2800 5500 0    50   Input ~ 0
 EN
 Text GLabel 1350 5250 0    50   Input ~ 0
 D0
@@ -423,7 +423,7 @@ L Device:R R2
 U 1 1 5BC93BF0
 P 3150 4350
 F 0 "R2" V 2943 4350 50  0000 C CNN
-F 1 "R" V 3034 4350 50  0000 C CNN
+F 1 "10k" V 3034 4350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 4350 50  0001 C CNN
 F 3 "~" H 3150 4350 50  0001 C CNN
 	1    3150 4350
@@ -434,7 +434,7 @@ L Device:R R3
 U 1 1 5BC93C61
 P 3150 5300
 F 0 "R3" V 2943 5300 50  0000 C CNN
-F 1 "R" V 3034 5300 50  0000 C CNN
+F 1 "10k" V 3034 5300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 5300 50  0001 C CNN
 F 3 "~" H 3150 5300 50  0001 C CNN
 	1    3150 5300
@@ -635,4 +635,16 @@ F 3 "~" H 7500 3600 50  0001 C CNN
 	1    7300 3600
 	0    -1   -1   0   
 $EndComp
+Text GLabel 2850 5300 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	2800 5500 3350 5500
+Connection ~ 3350 5500
+Wire Wire Line
+	3350 5500 3350 5300
+Text GLabel 2850 4350 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	2850 4700 3350 4700
+Connection ~ 3350 4700
 $EndSCHEMATC
