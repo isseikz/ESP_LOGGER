@@ -18,7 +18,7 @@ Text GLabel 1350 4350 0    50   Input ~ 0
 3.3V
 Text GLabel 1350 4650 0    50   Input ~ 0
 GND
-Text GLabel 2850 4350 0    50   Input ~ 0
+Text GLabel 2850 4700 0    50   Input ~ 0
 BOOT
 Wire Wire Line
 	2850 4350 3000 4350
@@ -48,11 +48,11 @@ Connection ~ 3900 5300
 Wire Wire Line
 	3500 5650 3350 5650
 Wire Wire Line
-	3350 5650 3350 5300
+	3350 5650 3350 5500
 Wire Wire Line
 	3300 5300 3350 5300
 Connection ~ 3350 5300
-Text GLabel 2850 5300 0    50   Input ~ 0
+Text GLabel 2800 5500 0    50   Input ~ 0
 EN
 Text GLabel 1350 5250 0    50   Input ~ 0
 D0
@@ -71,11 +71,11 @@ CD
 Text GLabel 2050 2600 2    50   Input ~ 0
 D0
 Text GLabel 2050 2300 2    50   Input ~ 0
-CLK
+SCK
 Text GLabel 2050 2500 2    50   Input ~ 0
-CMD
+DI
 Text GLabel 2050 2400 2    50   Input ~ 0
-D3
+CS
 Text GLabel 2050 1650 2    50   Input ~ 0
 GND
 Text GLabel 2050 1550 2    50   Input ~ 0
@@ -119,9 +119,9 @@ Text GLabel 3400 1650 2    50   Input ~ 0
 Text GLabel 3400 1750 2    50   Input ~ 0
 GND
 Text GLabel 3400 1850 2    50   Input ~ 0
-S_SCL
+SCL
 Text GLabel 3400 1950 2    50   Input ~ 0
-S_SDA
+SDA
 Wire Wire Line
 	3200 1650 3400 1650
 Wire Wire Line
@@ -133,11 +133,9 @@ Wire Wire Line
 Text GLabel 3400 2350 2    50   Input ~ 0
 D3
 Text GLabel 3400 2450 2    50   Input ~ 0
-CMD
+DI
 Text GLabel 3400 2550 2    50   Input ~ 0
 3.3V
-Text GLabel 3400 2650 2    50   Input ~ 0
-J_CLK
 Text GLabel 3400 2750 2    50   Input ~ 0
 GND
 Text GLabel 3400 2850 2    50   Input ~ 0
@@ -156,7 +154,7 @@ Wire Wire Line
 	3200 2850 3400 2850
 NoConn ~ 3200 2950
 Text GLabel 3400 3050 2    50   Input ~ 0
-J_CD
+CD
 Wire Wire Line
 	3200 3050 3400 3050
 Text GLabel 3400 3600 2    50   Input ~ 0
@@ -165,8 +163,6 @@ Text GLabel 3400 3700 2    50   Input ~ 0
 BATT_GND
 Text GLabel 4400 1650 2    50   Input ~ 0
 PC_GND
-Text GLabel 4400 1850 2    50   Input ~ 0
-PC_5V
 Text GLabel 4400 1950 2    50   Input ~ 0
 PC_TX
 Text GLabel 4400 2050 2    50   Input ~ 0
@@ -192,20 +188,11 @@ Wire Wire Line
 	5400 1750 5100 1750
 Wire Wire Line
 	5100 1650 5400 1650
-Text GLabel 4200 2400 0    50   Input ~ 0
-PC_5V
-Text GLabel 4200 2500 0    50   Input ~ 0
-PC_GND
 Text GLabel 4200 2850 0    50   Input ~ 0
 BATT
 Text GLabel 4200 2950 0    50   Input ~ 0
 BATT_GND
-Wire Wire Line
-	4200 2500 4800 2500
-Wire Wire Line
-	4200 2950 4800 2950
-Connection ~ 4800 2950
-Text GLabel 5250 2400 2    50   Input ~ 0
+Text GLabel 5300 2850 2    50   Input ~ 0
 POWER
 Text GLabel 5300 2950 2    50   Input ~ 0
 GND
@@ -215,13 +202,6 @@ Text GLabel 7900 1600 2    50   Input ~ 0
 POWER
 Text GLabel 7000 2300 3    50   Input ~ 0
 3.3V
-Wire Wire Line
-	5000 2850 4750 2850
-Wire Wire Line
-	5000 2400 5000 2850
-Connection ~ 5000 2400
-Wire Wire Line
-	4800 2500 4800 2950
 Wire Wire Line
 	7700 1600 7900 1600
 Wire Wire Line
@@ -250,22 +230,6 @@ Wire Wire Line
 	1400 1550 2050 1550
 Wire Wire Line
 	1400 1650 2050 1650
-Text GLabel 5100 4300 0    50   Input ~ 0
-SCL
-Text GLabel 5100 4650 0    50   Input ~ 0
-SDA
-Text GLabel 5900 4650 2    50   Input ~ 0
-S_SCL
-Text GLabel 5900 4300 2    50   Input ~ 0
-S_SDA
-Wire Wire Line
-	5100 4300 5350 4300
-Wire Wire Line
-	5650 4300 5900 4300
-Wire Wire Line
-	5100 4650 5350 4650
-Wire Wire Line
-	5650 4650 5900 4650
 Wire Wire Line
 	3900 4350 4150 4350
 Wire Wire Line
@@ -274,8 +238,6 @@ Wire Wire Line
 	3900 5300 4150 5300
 Wire Wire Line
 	3350 5300 3450 5300
-Wire Wire Line
-	5000 2400 5250 2400
 $Comp
 L Connector:Conn_01x08_Female ESP_COM1
 U 1 1 5BC906CC
@@ -287,10 +249,6 @@ F 3 "~" H 1200 2500 50  0001 C CNN
 	1    1200 2500
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4200 2400 5000 2400
-Wire Wire Line
-	4200 2850 4350 2850
 Wire Wire Line
 	1350 4350 1600 4350
 Wire Wire Line
@@ -361,19 +319,6 @@ F 3 "" H 7000 1450 60  0000 C CNN
 	1    7000 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4800 2950 5300 2950
-$Comp
-L pspice:DIODE D1
-U 1 1 5BC93915
-P 4550 2850
-F 0 "D1" H 4550 3115 50  0000 C CNN
-F 1 "DIODE" H 4550 3024 50  0000 C CNN
-F 2 "Diode_THT:D_A-405_P7.62mm_Horizontal" H 4550 2850 50  0001 C CNN
-F 3 "~" H 4550 2850 50  0001 C CNN
-	1    4550 2850
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R4
 U 1 1 5BC939EC
@@ -397,33 +342,11 @@ F 3 "~" H 5250 3400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R5
-U 1 1 5BC93B14
-P 5500 4300
-F 0 "R5" V 5293 4300 50  0000 C CNN
-F 1 "10k" V 5384 4300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 4300 50  0001 C CNN
-F 3 "~" H 5500 4300 50  0001 C CNN
-	1    5500 4300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5BC93B77
-P 5500 4650
-F 0 "R6" V 5293 4650 50  0000 C CNN
-F 1 "10k" V 5384 4650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5430 4650 50  0001 C CNN
-F 3 "~" H 5500 4650 50  0001 C CNN
-	1    5500 4650
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R2
 U 1 1 5BC93BF0
 P 3150 4350
 F 0 "R2" V 2943 4350 50  0000 C CNN
-F 1 "R" V 3034 4350 50  0000 C CNN
+F 1 "10k" V 3034 4350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 4350 50  0001 C CNN
 F 3 "~" H 3150 4350 50  0001 C CNN
 	1    3150 4350
@@ -434,7 +357,7 @@ L Device:R R3
 U 1 1 5BC93C61
 P 3150 5300
 F 0 "R3" V 2943 5300 50  0000 C CNN
-F 1 "R" V 3034 5300 50  0000 C CNN
+F 1 "10k" V 3034 5300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3080 5300 50  0001 C CNN
 F 3 "~" H 3150 5300 50  0001 C CNN
 	1    3150 5300
@@ -545,94 +468,23 @@ F 3 "~" H 3000 2750 50  0001 C CNN
 	1    3000 2750
 	-1   0    0    1   
 $EndComp
-Text GLabel 6500 2900 0    50   Input ~ 0
-CD
-Text GLabel 6500 3200 0    50   Input ~ 0
-CLK
-Text GLabel 7500 3200 2    50   Input ~ 0
-J_CLK
-Text GLabel 7500 2900 2    50   Input ~ 0
-J_CD
+Text GLabel 2850 5300 0    50   Input ~ 0
+3.3V
 Wire Wire Line
-	6500 2900 6700 2900
+	2800 5500 3350 5500
+Connection ~ 3350 5500
 Wire Wire Line
-	7300 2900 7500 2900
+	3350 5500 3350 5300
+Text GLabel 2850 4350 0    50   Input ~ 0
+3.3V
 Wire Wire Line
-	7500 3200 7300 3200
+	2850 4700 3350 4700
+Connection ~ 3350 4700
+Text GLabel 3400 2650 2    50   Input ~ 0
+SCK
 Wire Wire Line
-	6500 3200 6700 3200
-$Comp
-L Connector:TestPoint TP1
-U 1 1 5BCA46F6
-P 6700 2900
-F 0 "TP1" V 6654 3088 50  0000 L CNN
-F 1 "TestPoint" V 6745 3088 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 6900 2900 50  0001 C CNN
-F 3 "~" H 6900 2900 50  0001 C CNN
-	1    6700 2900
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP2
-U 1 1 5BCA480A
-P 6700 3200
-F 0 "TP2" V 6654 3388 50  0000 L CNN
-F 1 "TestPoint" V 6745 3388 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 6900 3200 50  0001 C CNN
-F 3 "~" H 6900 3200 50  0001 C CNN
-	1    6700 3200
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP3
-U 1 1 5BCA4854
-P 7300 2900
-F 0 "TP3" V 7495 2974 50  0000 C CNN
-F 1 "TestPoint" V 7404 2974 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 7500 2900 50  0001 C CNN
-F 3 "~" H 7500 2900 50  0001 C CNN
-	1    7300 2900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:TestPoint TP4
-U 1 1 5BCA48F0
-P 7300 3200
-F 0 "TP4" V 7495 3274 50  0000 C CNN
-F 1 "TestPoint" V 7404 3274 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 7500 3200 50  0001 C CNN
-F 3 "~" H 7500 3200 50  0001 C CNN
-	1    7300 3200
-	0    -1   -1   0   
-$EndComp
-Text GLabel 6500 3600 0    50   Input ~ 0
-GND
-Text GLabel 7500 3600 2    50   Input ~ 0
-GND
+	4200 2950 5300 2950
 Wire Wire Line
-	7500 3600 7300 3600
-Wire Wire Line
-	6500 3600 6700 3600
-$Comp
-L Connector:TestPoint TP5
-U 1 1 5BCAFF4C
-P 6700 3600
-F 0 "TP5" V 6654 3788 50  0000 L CNN
-F 1 "TestPoint" V 6745 3788 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 6900 3600 50  0001 C CNN
-F 3 "~" H 6900 3600 50  0001 C CNN
-	1    6700 3600
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP7
-U 1 1 5BCAFF53
-P 7300 3600
-F 0 "TP7" V 7495 3674 50  0000 C CNN
-F 1 "TestPoint" V 7404 3674 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 7500 3600 50  0001 C CNN
-F 3 "~" H 7500 3600 50  0001 C CNN
-	1    7300 3600
-	0    -1   -1   0   
-$EndComp
+	4200 2850 5300 2850
+NoConn ~ 4400 1850
 $EndSCHEMATC
